@@ -15,12 +15,10 @@ informado pelo usuário. */
 #include <math.h>
 #include <locale.h>
 
-int calcula_hexagono(float l, float *area, float *perimetro){
+void calcula_hexagono(float l, float *area, float *perimetro){
     *area = (3*pow(l, 2)*(sqrt(3)))/2;
 
     *perimetro = l*6;
-
-    return 0;
 }
 
 int main(void) {
