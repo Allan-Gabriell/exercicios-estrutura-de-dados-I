@@ -6,8 +6,9 @@ deve ler os dados de uma pessoa e imprimir os dados da pessoa.*/
 #include <stdlib.h>
 #include <string.h>
 
-typedef union genero{
-    char MASC_FEMI[10];
+typedef enum genero{
+    MASCULINO,
+    FEMININO
 } Genero;
 
 typedef struct pessoa{
@@ -17,30 +18,28 @@ typedef struct pessoa{
 } Pessoa;
 
 void cadastro_pessoa(Pessoa *p){
-    int opcao;
     printf("=== Cadastro de Pessoas ===\n");
     printf("Informe o nome: ");
     scanf("%[^\n]", p->nome);
     printf("Informe a idade: ");
     scanf("%d", &p->idade);
-    printf("Informe 1 para MASCULINO e 0 para FEMININO: ");
-    scanf("%d", &opcao);
-    // 1 = verdadeiro, 2 = falso
-    if(opcao){
-        strcpy(p->gener.MASC_FEMI, "MASCULINO");
-    } else {
-        strcpy(p->gener.MASC_FEMI, "FEMININO");
-    }
+    printf("Informe 0 para MASCULINO e 1 para FEMININO: ");
+    scanf("%d", &p->gener);
+}
+
+void imprime(Pessoa *p){
+    printf("Dados cadastrados: \n");
+    printf("Nome: %s\n", p->nome);
+    printf("Idade: %d\n", p->idade);
+    //Operador ternário
+    // condição ? "se verdade" : "caso contrário"
+    printf("Genero: %s\n", p->gener == MASCULINO ? "Masculino" : "Feminino");
 }
 
 int main(void){
     Pessoa *pessoa = malloc(sizeof(Pessoa));
     cadastro_pessoa(pessoa);
-
-    printf("Dados cadastrados: \n");
-    printf("Nome: %s\n", pessoa->nome);
-    printf("Idade: %d\n", pessoa->idade);
-    printf("Genero: %s\n", pessoa->gener.MASC_FEMI);
+    imprime(pessoa);
 
     return 0;
 }
