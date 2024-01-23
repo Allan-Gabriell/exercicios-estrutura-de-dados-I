@@ -32,7 +32,7 @@ void preenche(Ingresso *i){
     getchar(); 
     printf("Informe a atracao: ");
     scanf("%[^\n]", i->attraction);
-    getchar(); // Para consumir o caractere de nova linha após ler a atração
+    getchar(); 
 }
 
 void imprima(Ingresso *i, int n){
@@ -48,10 +48,10 @@ void altera_preco_especifico(int n, Ingresso *vet){
     float novo_preco;
     printf("Informe o número do ingresso que deseja alterar o preço: ");
     scanf("%d", &index);
-    getchar(); // Para consumir o caractere de nova linha após ler o índice
+    getchar(); 
     printf("Informe o novo preço: ");
     scanf("%f", &novo_preco);
-    getchar(); // Para consumir o caractere de nova linha após ler o novo preço
+    getchar(); 
     vet[index-1].price = novo_preco;
 }
 
@@ -75,7 +75,6 @@ int main(void){
     int n;
     printf("Quantos ingressos deseja cadastrar: ");
     scanf("%d", &n);
-    getchar(); // Para consumir o caractere de nova linha após ler o número de ingressos
     Ingresso *ingressos = malloc(n * sizeof(Ingresso));
     for(int i = 0; i < n; i++){
         preenche(&ingressos[i]);
@@ -91,5 +90,3 @@ int main(void){
 
     return 0;
 }
-
-
