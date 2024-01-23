@@ -4,7 +4,6 @@ deve ler os dados de uma pessoa e imprimir os dados da pessoa.*/
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 typedef enum genero{
     MASCULINO,
@@ -40,6 +39,8 @@ int main(void){
     Pessoa *pessoa = malloc(sizeof(Pessoa));
     cadastro_pessoa(pessoa);
     imprime(pessoa);
+
+    free(pessoa);
 
     return 0;
 }
