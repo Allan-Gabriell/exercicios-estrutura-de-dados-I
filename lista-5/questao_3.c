@@ -26,7 +26,7 @@ Ret* ret_circunscrito(Circ *c, float h){
         exit(1);
     }
     r->altura = h;
-    r->base =  2 * sqrt((c->raio) * (c->raio) - (h/2) * (h/2));
+    r->base =  2 * sqrt(pow(c->raio, 2) - pow(h/2, 2));
     return r;
 }
 

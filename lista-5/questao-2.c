@@ -132,7 +132,7 @@ int main(void){
     scanf("%d", &n);
     getchar(); 
 
-    Aluno **aluno = malloc(n * sizeof(Aluno*));
+    Aluno **aluno = (Aluno*) malloc(n * sizeof(Aluno*));
     if(aluno == NULL){
         printf("Infelizmente tivemos um erro de alocação!");
         exit(1);
