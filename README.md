@@ -116,6 +116,8 @@ O programa leva em consideração que é ofertado um número máximo de vagas pa
 
     \(b = 2 \sqrt{r^2 - \left(\frac{h}{2}\right)^2}\)
 
+    <img src="src/Captura de tela de 2024-01-28 15-09-56.png">
+
     onde `b` é a base do retângulo, `r` é o raio do círculo e `h` é a altura do retângulo.
 
 Dado um retângulo, o programa cria e retorna o maior círculo que pode ser inscrito no retângulo. O raio `r` do círculo é determinado pela menor dimensão do retângulo (base ou altura), dividida por 2.
