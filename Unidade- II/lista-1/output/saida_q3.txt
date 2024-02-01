@@ -1,0 +1,4 @@
+João	8.0	 aprovado
+maria	6.2	 reprovado
+claudio	6.4	 reprovado
+Pedro	7.0	 aprovado

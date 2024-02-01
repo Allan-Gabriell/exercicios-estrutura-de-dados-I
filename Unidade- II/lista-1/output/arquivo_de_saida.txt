@@ -1,0 +1,3 @@
+Menor número: 1
+Maior número: 19
+Média: 7.90
