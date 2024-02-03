@@ -36,6 +36,7 @@ int main(void){
     }
 
     //encerro meus arquivos
+    
     fclose(arquivo_entrada);
     fclose(arquivo_saida);
 
